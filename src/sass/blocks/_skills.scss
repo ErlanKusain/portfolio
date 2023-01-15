@@ -1,0 +1,91 @@
+.skills{
+    margin: 100px 0 100px 0;
+    &__wrapper{
+        display: grid;
+        grid-template-columns: repeat(4, 270px);
+        grid-auto-rows: 270px;
+        column-gap: 13px;
+        row-gap: 13px;
+
+        margin-top: 60px;
+        justify-content: center;
+        align-content: center;
+    }
+    &__item{
+        width: 270px;
+        height: 270px;
+        border: 2px solid #000;
+
+        font-size: 12px;
+        font-weight: 500;
+
+        padding: 30px 30px 25px 30px;
+        &-jquery{
+            img{
+                margin-top: 15px;
+                margin-bottom: 12px;
+            }
+        }
+        &-mongo{
+            img{
+                margin-bottom: 20px;
+            }
+        }
+        &-title{
+            margin-top: 20px;
+            font-weight: 700;
+        }
+        &-descr{
+            margin-top: 15px;
+        }
+        
+    }
+    &__title{
+        position: relative;
+        text-align: center;
+        @include before_circle;
+        &:before{
+            top: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+    }
+    &__subtitle{
+        text-align: center;
+    }
+    .divider{
+        margin: 0 auto;
+        margin-top: 25px;
+    }
+
+    // 
+
+    &__blocks{
+        display: grid;
+        grid-template-columns: repeat(3, 350px);
+        column-gap: 45px;
+        row-gap: 30px;
+
+        margin-top: 120px;
+        &-block{
+           width: 350px;
+           height: 14px;
+           background-color: #E8E4DE;
+           border-radius: 4px;
+        }
+        &-item{
+            height: 14px;
+            background-color: $main-color;
+            border-radius: 4px;
+        }
+        &-descr{
+            max-width: 350px;
+            margin-bottom: 27px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+}

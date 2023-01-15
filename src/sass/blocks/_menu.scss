@@ -1,0 +1,120 @@
+.hamburger{
+    position: absolute;
+    right: 25px;
+    top: 30px;
+    width: 40px;
+    height: 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    cursor: pointer;
+    &_1{
+        display: block;
+        height: 3px;
+        width: 30px;
+        background-color:#131313;
+        margin-bottom: 5px;
+    }
+    &_2{
+        display: block;
+        height: 3px;
+        width: 35px;
+        background-color:#131313;
+        margin-bottom: 5px;
+    }
+    &_3{
+        display: block;
+        height: 3px;
+        width: 30px;
+        background-color:#131313;
+        margin-bottom: 5px;
+    }
+}
+
+
+.menu{
+    position: fixed;
+    top:0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.6s;
+    &.active{
+        left: 0;
+        visibility: visible;
+        opacity: 1;
+    }
+    &__block{
+        position: relative;
+        // left: 100%;
+        width: 400px;
+        background-color: $main-color;
+        height: 100%;
+        padding-top: 140px;
+        padding-left: 40px;
+        transition: all 0.6s;
+        z-index: 10;
+    }
+    &__close{
+        position: absolute;
+        top: 25px;
+        right: 25px;    
+        cursor: pointer;
+    }
+    &__list{
+        list-style-type: none;
+        padding-left: 35px;
+    }
+    &__link{
+        position: relative;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 36px;
+        margin-bottom: 15px;
+        &:before{
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: -35px;
+            width: 15px;
+            height: 15px;
+            border: solid 2px #131313;
+            border-radius: 100%;
+            transition: all 0.6s;
+        }
+        &:hover{
+            &::before{
+                background-color: #fff;
+            }
+        }
+        a{
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+    &__social{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 50px;
+
+        width: 90px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__overlay{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        opacity: .35;
+    }
+}

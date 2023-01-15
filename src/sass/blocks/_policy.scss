@@ -1,0 +1,20 @@
+.policy{
+    &__wrapper{ 
+        width: 1050px;
+        margin: 0 auto;
+        padding: 30px 0 50px 0;
+        &-title{
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 50px;
+        }
+        span{
+            font-size: 18px;
+            font-weight: 700;
+            display: block;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    }
+
+}
