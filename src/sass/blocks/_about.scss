@@ -102,14 +102,11 @@
 // } 
 
 .about{
-    width: 1140px;
     margin: 150px auto 0px auto;
     display: grid;
     grid-template-columns: 400px 670px;
-    grid-template-rows: minmax(245px, auto) minmax(255px, auto);
-    grid-auto-rows: minmax(245px, auto);
+    grid-template-rows: auto;
     column-gap: 70px;
-    row-gap: 40px;
     &__block{
         padding-top: 6px;
         .divider{
